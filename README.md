@@ -54,7 +54,7 @@ cd ~/storage/downloads
 ### 2️⃣ One-Line Install Command (Run Once)
 
 ```bash
-pkg update -y && pkg upgrade -y && pkg install git python ffmpeg nodejs -y && pip install yt-dlp textual rich && git clone https://github.com/divyesh255/ClipForge-Professional-YouTube-Multi-Clip-Downloader.git && cd ClipForge-Professional-YouTube-Multi-Clip-Downloader
+pkg update -y && pkg upgrade -y && pkg install git python ffmpeg nodejs-lts -y && pip install yt-dlp textual rich && git clone https://github.com/divyesh255/ClipForge-Professional-YouTube-Multi-Clip-Downloader.git && cd ClipForge-Professional-YouTube-Multi-Clip-Downloader
 ```
 
 This will:
@@ -74,7 +74,7 @@ python3 main.py
 Run update command:
 
 ```bash
-pkg update -y && pkg upgrade -y && pip install -U yt-dlp
+pkg update -y && pkg upgrade -y && pkg install -U nodejs-lts && pip install -U yt-dlp
 ```
 
 Then run the tool again:
