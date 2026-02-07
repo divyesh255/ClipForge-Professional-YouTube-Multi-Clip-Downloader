@@ -57,7 +57,7 @@ def download_clips(url, clips, quality, log_callback=None):
 
         start = clip["start"]
         end = clip["end"]
-        filename = f"{title}_{now}_clip_{i}.mp4"
+        filename = f"clip_{i:03d}_{now}.mp4"
 
         if log_callback:
             log_callback(f"⬇ Downloading clip {i}: {start} → {end}")
