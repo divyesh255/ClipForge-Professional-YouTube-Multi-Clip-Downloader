@@ -33,6 +33,67 @@ Supports:
 
 # 🚀 Installation
 
+## 📱 Termux Setup (Android)
+
+### 1️⃣ Install Termux & Setup Storage
+
+Install Termux from Play Store: [https://play.google.com/store/apps/details?id=com.termux](https://play.google.com/store/apps/details?id=com.termux)
+
+Open Termux and run:
+
+```bash
+termux-setup-storage
+```
+
+Allow storage permission, then go to Downloads folder:
+
+```bash
+cd ~/storage/downloads
+```
+
+### 2️⃣ One-Line Install Command (Run Once)
+
+```bash
+pkg update -y && pkg upgrade -y && pkg install git python ffmpeg nodejs -y && pip install yt-dlp textual rich && git clone https://github.com/divyesh255/ClipForge-Professional-YouTube-Multi-Clip-Downloader.git && cd ClipForge-Professional-YouTube-Multi-Clip-Downloader
+```
+
+This will:
+
+* Install all dependencies
+* Clone project
+* Prepare environment
+
+### 3️⃣ Run the Tool
+
+```bash
+python3 main.py
+```
+
+### 4️⃣ If YouTube Updates and Tool Stops Working
+
+Run update command:
+
+```bash
+pkg update -y && pkg upgrade -y && pip install -U yt-dlp
+```
+
+Then run the tool again:
+
+```bash
+python3 main.py
+```
+
+### 💡 Notes
+
+* Always run tool inside Termux
+* All downloaded clips will be saved in your File Manager → Download folder → ClipForge-Professional-YouTube-Multi-Clip-Downloader
+* Works on Android 11+
+* No root required
+* If download fails → run update command above
+* NodeJS is used as JS runtime for yt-dlp
+
+## 📱  Linux/Ubuntu/WSL Setup
+
 Run installer script:
 ```
 $ git clone https://github.com/divyesh255/ClipForge-Professional-YouTube-Multi-Clip-Downloader.git
@@ -46,12 +107,22 @@ This installs:
 * yt-dlp
 * ffmpeg
 * textual UI
-* deno
+* nodejs
 * dependencies
 
-# ▶️ Run Tool
+### ▶️ Run Tool
+```
+$ python3 main.py
+```
+### 🔄 If YouTube Updates and Tool Stops Working
+```
+$ ./install.sh
+```
 
-`python3 main.py`
+This updates:
+
+* yt-dlp
+* dependencies
 
 # 🧠 Usage
 
@@ -67,18 +138,6 @@ HH:MM:SS
 
 Example:
 00:01:20 → 00:01:40
-
-# 🔄 Update Tool (Very Important)
-
-If YouTube changes or download stops working:
-
-./clipforge_update.sh
-
-This updates:
-
-* yt-dlp
-* deno
-* dependencies
 
 # 🤝 Contributing
 
